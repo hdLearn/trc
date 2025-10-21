@@ -1,6 +1,35 @@
 # TRC
 The project aims to create a **T**iny **R**ISC **C**PU with a custom instruction set.
 
+## CPU architecture 
+
+It's a very simple CPU who works in one cycle per instruction. So it doesn't have a lot of elements, the goal is to by asap.
+
+```mermaid
+block
+columns 7
+space:4 a["Instruction register"] space:2
+space:7
+b["Memory"] space c["Memory Controller"] space:3 e["Cache"]
+space:7
+space:4 d["Control Logic"] space g["ALU"]
+space:7
+space:4 f["Programme Counter"] space:2
+
+b --> c
+c --> b
+c --> a
+a --> e
+d --> c
+f --> c
+d --> f
+e --> g
+g --> e
+d --> e
+c --> e
+e --> c
+```
+
 ## Instruction set
 Inspired by the RISC-V instruction set presented by [DZone](https://dzone.com/articles/introduction-to-the-risc-v-architecture), I keep just the minimum, it's a lite bit less than the RV32I. It's also structure differently.
 
