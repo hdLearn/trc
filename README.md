@@ -97,6 +97,10 @@ In the following table, I will present my instruction set. For better notation, 
     jnl x01, r0, r0   " line x03
     ```
 
+## Compiler
+
+At the end, I will like to write asm code and compile it with a rust program. The output will be a memory.vhd file with the program inside directly in machine code.
+
 ## Issues
 
 1. TerosHDL made a weird indentation with `case` :
