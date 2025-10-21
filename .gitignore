@@ -1,0 +1,22 @@
+# Files without extension
+*
+!*/
+!*.*
+
+# VHDL test bench
+*.cf
+*.vcd
+*.dat
+*.o
+
+# Nextpnr
+*.asc
+*.json
+
+# Rust
+target/
+
+# Special files
+!LICENSE
+!makefile
+!Makefile
